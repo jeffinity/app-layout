@@ -1,0 +1,22 @@
+server:
+  http:
+    addr: 0.0.0.0:7301
+    timeout: 30s
+  grpc:
+    addr: 0.0.0.0:7401
+    timeout: 30s
+
+log:
+  level: "DEBUG"
+  max_backups: 10
+  rotate_daily: true
+  max_size_mb: 100
+  compress: true
+  log_dir: /tmp/app_layout
+
+data:
+  postgres:
+    dsn: 'postgresql://postgres:postgres%402025@10.10.10.58:5432/app_layout?sslmode=disable&search_path=public&connect_timeout=20&timezone=Asia/Shanghai'
+
+  redis:
+    dsn: 'redis://:ba070336c60bd88fc214ddd6cfd4825d25bb90d6704f0aff71d35b0f89c7e670@10.10.10.58:6377/1'

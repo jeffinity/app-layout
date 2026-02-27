@@ -1,0 +1,11 @@
+
+nacos:
+  addr: 10.10.10.58
+  port: 8848
+  username: nacos
+  password: nacos
+  log_dir: /tmp/app_layout
+  cluster_name: probe-executor
+  namespace_id: d31462d5-469d-4252-86f2-f9504e01c65e  # nacos namespace 注册获取
+  group_id: probe-executor                                # 约定: 直接使用子应用名称
+  data_id: probe-executor-app_layout-dev.yaml         # 约定: {产品名称}-{应用名称}-{环境标识}.yaml
